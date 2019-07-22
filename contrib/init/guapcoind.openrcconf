@@ -1,0 +1,26 @@
+# /etc/conf.d/guapcoind: config file for /etc/init.d/guapcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/guapcoin/guapcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/guapcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/guapcoind.pid"
+
+# Where to write guapcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/guapcoind"
+
+# User and group to own guapcoind process
+#BITCOIND_USER="guapcoin"
+#BITCOIND_GROUP="guapcoin"
+
+# Path to guapcoind executable
+#BITCOIND_BIN="/usr/bin/guapcoind"
+
+# Nice value to run guapcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
