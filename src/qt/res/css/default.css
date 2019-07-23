@@ -1,7 +1,7 @@
 /****************************************************************************************/
 /* Global color codes:                                                                  */
 /* dark-blue:          #8f802d                                                          */
-/* light-green:        #4ec289                                                          */
+/* light-green:        #c24e4e                                                          */
 /* background:         #f8f6f6                                                          */
 /* input fields:       #e7e7e7                                                          */
 /****************************************************************************************/
@@ -77,7 +77,7 @@ QToolBar > QToolButton:checked {
 	background-color: #b5a33c;
 	color:#fff;
 	font-weight:bold;
-	border-right: 7px solid #4ec289;
+	border-right: 7px solid #c24e4e;
 }
 
 QToolBar > QToolButton:hover {
@@ -108,7 +108,7 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-	background-color: #4ec298;
+	background-color: #c24e4e;
 	width: 12px;
 	font: 12px;
 	text-align: center;
@@ -117,7 +117,7 @@ QProgressBar::chunk {
 
 QLabel#progressBarLabel {
 	background-color: transparent;
-	color: #4ec298;
+	color: #c24e4e;
 	padding-left: 5px;
 	padding-right: 5px;
 	font: 12px;
@@ -220,7 +220,7 @@ QPushButton { /* Global Button Style */
 	background-color: #8f802d;
 	border-width: 1px;
 	border-style: outset;
-	border-color: #4ec289;
+	border-color: #c24e4e;
 	border-radius: 2px;
 	color:#ffffff;
 	font-size:12px;
@@ -234,7 +234,7 @@ QPushButton { /* Global Button Style */
 }
 
 QPushButton:hover {
-	background-color: #4ec289;
+	background-color: #c24e4e;
 }
 
 QPushButton:pressed {
@@ -429,7 +429,7 @@ QTableView::item { /* Table Item */
 }
 
 QTableView::item:selected { /* Table Item Selected */
-	background-color:#4ec289;
+	background-color:#c24e4e;
 	color:#fff;
 }
 
@@ -762,7 +762,7 @@ QDialog#RPCConsole QWidget#tab_info QLabel#label_11, QDialog#RPCConsole QWidget#
 }
 
 QDialog#RPCConsole QWidget#tab_peers QLabel#peerHeading { /* Peers Info Header */
-	color:#4ec289;
+	color:#c24e4e;
 }
 
 QDialog#RPCConsole QTableView#peerWidget::item { /* Peers Table Items */
