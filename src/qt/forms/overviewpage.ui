@@ -671,7 +671,7 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string notr="true">&lt;a href=&quot;https://GUAP.network/&quot;&gt;https://GUAP.network/&lt;/a&gt;</string>
+                          <string notr="true">&lt;a href=&quot;https://guapcoin.org/&quot;&gt;https://guapcoin.org/&lt;/a&gt;</string>
                          </property>
                          <property name="textFormat">
                           <enum>Qt::RichText</enum>
@@ -700,7 +700,7 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string notr="true">&lt;a href=&quot;https://discordapp.com/invite/9nzt37V/&quot;&gt;https://discordapp.com/invite/9nzt37V/&lt;/a&gt;</string>
+                          <string notr="true">&lt;a href=&quot;https://discord.gg/ndQVgtv/&quot;&gt;https://discord.gg/ndQVgtv/&lt;/a&gt;</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -726,7 +726,7 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string notr="true">&lt;a href=&quot;https://github.com/zabtc/Guapcoin/&quot;&gt;https://github.com/zabtc/Guapcoin/&lt;/a&gt;</string>
+                          <string notr="true">&lt;a href=&quot;https://github.com/guapcrypto/Guapcoin/&quot;&gt;https://github.com/guapcrypto/Guapcoin/&lt;/a&gt;</string>
                          </property>
                          <property name="alignment">
                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -752,7 +752,7 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string notr="true">&lt;a href=&quot;http://104.238.138.11:3001/&quot;&gt;http://104.238.138.11:3001/&lt;/a&gt;</string>
+                          <string notr="true">&lt;a href=&quot;http://165.227.201.59:3001/&quot;&gt;http://165.227.201.59:3001/&lt;/a&gt;</string>
                          </property>
                          <property name="alignment">
                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -791,7 +791,7 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string notr="true">&lt;a href=&quot;https://wallet.crypto-bridge.org/market/BRIDGE.GUAP_BRIDGE.BTC/&quot;&gt;https://wallet.crypto-bridge.org/market/BRIDGE.GUAP_BRIDGE.BTC/&lt;/a&gt;</string>
+                          <string>Coming soon</string>
                          </property>
                          <property name="alignment">
                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -817,7 +817,7 @@
                           </font>
                          </property>
                          <property name="text">
-                          <string notr="true">&lt;a href=&quot;cryptoguapcoin@gmail.com&quot;&gt;cryptoguapcoin@gmail.com&lt;/a&gt;</string>
+                          <string notr="true">&lt;a href=&quot;wallet@guapcoin.com&quot;&gt;wallet@guapcoin.com&lt;/a&gt;</string>
                          </property>
                          <property name="alignment">
                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
