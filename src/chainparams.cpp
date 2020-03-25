@@ -42,12 +42,12 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000002563024b106ca6630ff598e3016fc218f6c5f21366623bce0e75bfc2064"));
+    (0, uint256("0x0000066746a2abcf5395a646410cd9b84925fd19a720542624e475280ccedb80"));
 	
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1563817096, // * UNIX timestamp of last checkpoint block
+    1585061644, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -77,11 +77,11 @@ public:
     {
         networkID = CBaseChainParams::MAIN;
         strNetworkID = "main";
-        pchMessageStart[0] = 0x32;
-        pchMessageStart[1] = 0xcb;
-        pchMessageStart[2] = 0x12;
-        pchMessageStart[3] = 0xac;
-        vAlertPubKey = ParseHex("045ad6f1551c2367f81c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
+        pchMessageStart[0] = 0x12;
+        pchMessageStart[1] = 0xbc;
+        pchMessageStart[2] = 0x34;
+        pchMessageStart[3] = 0xca;
+        vAlertPubKey = ParseHex("045ad6f1551c2367f18c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
         nDefaultPort = 34127;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 1050000;
@@ -98,24 +98,54 @@ public:
         nLastPOWBlock = 200;
         nModifierUpdateBlock = 1; // we use the version 2 for GUAP
 
-        const char* pszTimestamp = "Guapcoin is born! - zabtc 22/07/2019";
+        const char* pszTimestamp = "Guapcoin is born! 24/03/2020";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04f5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04f5a8143f68ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1563817096;
+        genesis.nTime = 1585061644;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21770810;
+        genesis.nNonce = 260912;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000002563024b106ca6630ff598e3016fc218f6c5f21366623bce0e75bfc2064"));
-        assert(genesis.hashMerkleRoot == uint256("0xb693cbb2fed7b4fbab60499202c45bf8dce6d839c2938ad0132c29dd16daa014"));
+        assert(hashGenesisBlock == uint256("0x0000066746a2abcf5395a646410cd9b84925fd19a720542624e475280ccedb80"));
+        assert(genesis.hashMerkleRoot == uint256("0x1fe45b9549d1c7a4849fa03030444cd4b61c8b4932df263d9e9525376c30bb16"));
+
+        /** Generating the mainnet Genesis 
+                 if(genesis.GetHash() != hashGenesisBlock)
+                 {
+                    printf("Searching for mainnet genesis block...\n");
+                    uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                    uint256 thash;
+          while (true)
+          {
+              thash = genesis.GetHash();
+              if (thash <= hashTarget)
+                  break;
+              if ((genesis.nNonce & 0xFFF) == 0)
+              {
+                  printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+              }
+              ++genesis.nNonce;
+              if (genesis.nNonce == 0)
+              {
+                  printf("NONCE WRAPPED, incrementing time\n");
+                  ++genesis.nTime;
+              }
+          }
+          printf("genesis.nTime = %u \n", genesis.nTime);
+          printf("genesis.nNonce = %u \n", genesis.nNonce);
+          printf("genesis.nVersion = %u \n", genesis.nVersion);
+          printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+          printf("genesis.hashMerkleRoot = %s \n", genesis.hashMerkleRoot.ToString().c_str());
+               }
+         End generating the mainnet Genesis **/
 
         // Guapcoin addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
