@@ -14,8 +14,8 @@ Furthermore, as result of offering multiple ways for users to mint new GUAP coin
 #### Algorithm: - *Quark-hash* 
 #### Masternode collateral - *10,000 GUAP*  
 #### Features: - *SwiftTX, budget, treausury and masternode governance is enabled* 
-#### RPC Port: - *9634* 
-#### P2P Port: - *9633* 
+#### RPC Port: - *34126* 
+#### P2P Port: - *34127* 
 
 ## Block reward breakdown
 

@@ -203,10 +203,10 @@ QT_TRANSLATE_NOOP("guapcoin-core", ""
 QT_TRANSLATE_NOOP("guapcoin-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("guapcoin-core", "(9633 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("guapcoin-core", "(34127 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("guapcoin-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("guapcoin-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("guapcoin-core", "(must be 9633 for mainnet)"),
+QT_TRANSLATE_NOOP("guapcoin-core", "(must be 34127 for mainnet)"),
 QT_TRANSLATE_NOOP("guapcoin-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("guapcoin-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("guapcoin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
